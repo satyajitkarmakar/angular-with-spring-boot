@@ -1,0 +1,24 @@
+<div class="container mx-auto w-50 mt-3">
+    <div class="container" id="todo-heading">
+        <h4>My Todo's</h4>
+    </div>
+    <table class="table table-hover">
+        <!-- <title>My Todo's</title> -->
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Completed</th>
+                <th>Expected Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todo of todos">
+                <td>{{todo.id}}</td>
+                <td>{{todo.description}}</td>
+                <td>{{todo.completed}}</td>
+                <td>{{todo.targetDate | date}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
